@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class CkeditorAsset extends AssetBundle
+class CKEditorAsset extends AssetBundle
 {
     public $sourcePath = '@bower/ckeditor';
 

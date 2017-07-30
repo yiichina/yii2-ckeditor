@@ -7,17 +7,17 @@ use yii\Helpers\Html;
 /**
  * This is just an example.
  */
-class Simditor extends \yii\widgets\InputWidget
+class CKEditor extends \yii\widgets\InputWidget
 {
     public function init()
     {
         $view = $this->getView();
-        CkeditorAsset::register($view);
+        CKEditorAsset::register($view);
 		$view->registerJs('CKEDITOR.replace("editor")');
     }
 
     public function run()
     {
-        return Html::activeTextarea($this->model, $this->attribute, ['rows' => $rows, 'data-provide' => 'markdown-editor']);
+        return Html::activeTextarea($this->model, $this->attribute);
     }
 }
