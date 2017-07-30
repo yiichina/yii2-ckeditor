@@ -11,9 +11,10 @@ class CKEditor extends \yii\widgets\InputWidget
 {
     public function init()
     {
+        parent::init();
         $view = $this->getView();
         CKEditorAsset::register($view);
-		$view->registerJs('CKEDITOR.replace("editor")');
+		$view->registerJs("CKEDITOR.replace(\"{$this->options['id']}\")");
     }
 
     public function run()
