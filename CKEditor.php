@@ -19,6 +19,10 @@ class CKEditor extends \yii\widgets\InputWidget
 
     public function run()
     {
-        return Html::activeTextarea($this->model, $this->attribute);
+        if($this->hasModel()) {
+            return Html::activeTextarea($this->model, $this->attribute, $this->options);
+        } else {
+            return Html::textarea($this->name, $this->value, $this->options);
+        }
     }
 }
